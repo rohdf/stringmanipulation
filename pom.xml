@@ -58,15 +58,11 @@
 		</profile>
 		
 		
-
-		
-		
 		<profile>
 			<id>prod</id>
 			<properties>
 				<build.properties.id>prod</build.properties.id>
 			</properties>
-			
 			<build>
 				<resources>
 					<resource>
