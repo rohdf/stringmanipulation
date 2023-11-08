@@ -20,12 +20,15 @@
 	</properties>
 
 	<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.10.1</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<profiles>
@@ -56,8 +59,8 @@
 				</resources>
 			</build>
 		</profile>
-		
-		
+
+
 		<profile>
 			<id>prod</id>
 			<properties>
@@ -71,62 +74,10 @@
 				</resources>
 			</build>
 		</profile>
-		
-		
-		
+
+
 	</profiles>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
@@ -174,6 +125,66 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 
+				</plugin>
+
+				<!--
+				https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.8.10</version>
+					
+
+					<!-- Configurer jacoco pour le rapport -->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<executions>
+						<execution>
+							<goals><!-- Initialiser Jacoco pour préparer la génération du rapport-->
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						
+						<execution><!-- Run le goal qui permettra la génération du report -->
+							<id>generatereport</id>
+							<phase>test</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+						
+						
+					</executions>
+					
+					
+					
 				</plugin>
 			</plugins>
 		</pluginManagement>
